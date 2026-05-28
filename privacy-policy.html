@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Pixel Chain</title>
+    <link rel="icon" href="./image/appicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Pixelify+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #00142B;
+            --bg-gradient-end: #032145;
+            --card-bg: rgba(15, 37, 65, 0.75);
+            --card-border: rgba(96, 165, 250, 0.15);
+            --text-main: #F1F5F9;
+            --text-muted: #94A3B8;
+            --accent: #3B82F6;
+            --accent-light: #60A5FA;
+            --highlight: #10B981;
+            --shadow-color: rgba(96, 165, 250, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-gradient-end) 100%);
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Container Card with Premium Glassmorphism */
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 2px solid var(--card-border);
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 50px var(--shadow-color);
+            animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Header styling with branding logo assets */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px dashed rgba(148, 163, 184, 0.2);
+            padding-bottom: 30px;
+        }
+
+        .app-icon {
+            width: 90px;
+            height: 90px;
+            margin-bottom: 16px;
+            image-rendering: pixelated;
+        }
+
+        .app-name {
+            height: 48px;
+            object-fit: contain;
+            margin-bottom: 8px;
+        }
+
+        header h1 {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 2.2rem;
+            letter-spacing: 0.1em;
+            color: var(--text-main);
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            color: var(--accent-light);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-top: 5px;
+            font-weight: 500;
+        }
+
+        .last-updated {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 15px;
+        }
+
+        /* Content styling */
+        section {
+            margin-bottom: 35px;
+        }
+
+        section:last-of-type {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 1.4rem;
+            color: var(--accent-light);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Custom CSS pixel block decorator before heading */
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: var(--highlight);
+            box-shadow: 0 0 8px var(--highlight);
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 16px;
+            font-weight: 300;
+        }
+
+        ul {
+            list-style-type: none;
+            margin-bottom: 20px;
+            padding-left: 5px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        /* Custom CSS pixel arrow for bullet points */
+        li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: var(--accent-light);
+            font-size: 0.8rem;
+        }
+
+        /* Callout Box styled like in-game alert */
+        .callout-box {
+            background: rgba(59, 130, 246, 0.08);
+            border-left: 4px solid var(--accent);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+
+        .callout-box h3 {
+            font-family: 'Pixelify Sans', sans-serif;
+            color: var(--text-main);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .callout-box p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Footer developer branding and signoff */
+        footer {
+            margin-top: 50px;
+            border-top: 2px dashed rgba(148, 163, 184, 0.2);
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            text-align: center;
+        }
+
+        .dev-name {
+            height: 40px;
+            object-fit: contain;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .dev-name:hover {
+            opacity: 1;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            margin-bottom: 0;
+        }
+
+        /* Responsive scaling */
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px;
+                border-radius: 16px;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .app-icon {
+                width: 70px;
+                height: 70px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <img class="app-icon" src="./image/appicon.png" alt="Pixel Chain Icon">
+            <img class="app-name" src="./image/appnamelong.png" alt="Pixel Chain">
+            <p class="subtitle">Privacy Policy</p>
+            <p class="last-updated">Last Updated: May 26, 2026</p>
+        </header>
+
+        <section>
+            <h2>Introduction</h2>
+            <p>
+                Welcome to <strong>Pixel Chain</strong>, a retro puzzle game built with privacy in mind. We are
+                committed to protecting your gaming experience. This Privacy Policy describes how we handle information
+                when you play our game on Android and iOS devices.
+            </p>
+        </section>
+
+        <section>
+            <h2>Information We Collect</h2>
+            <p>
+                We value your privacy. <strong>Pixel Chain does not collect any personal identifiers</strong> such as
+                your real name, email address, phone number, location, or payment info.
+            </p>
+            <p>
+                To support core game features, we process only the following anonymous gameplay data:
+            </p>
+            <ul>
+                <li><strong>Anonymous Profile Data:</strong> When you set up the game, a randomly selected profile icon
+                    and your chosen custom player name are stored. No real-world identities are requested or saved.</li>
+                <li><strong>Game Progression:</strong> We save your max unlocked level (from Level 1 to 100) and your
+                    collection of unlocked sticker rewards to sync your progress.</li>
+                <li><strong>Device Identification:</strong> An anonymous, system-generated identifier is used to
+                    unique-link your offline progress with cloud storage backups.</li>
+            </ul>
+        </section>
+
+        <div class="callout-box">
+            <h3>🔒 Firebase Cloud Synchronization</h3>
+            <p>
+                Pixel Chain utilizes Google Firebase Firestore to securely back up your level progress and unlocked
+                sticker rewards. This ensures that you can restore your gameplay achievements even if you reinstall the
+                app or change devices. All data is linked to an anonymous credential.
+            </p>
+        </div>
+
+        <section>
+            <h2>Storage & Data Retention</h2>
+            <p>
+                Your gameplay data is stored in two locations:
+            </p>
+            <ul>
+                <li><strong>Local Storage:</strong> Achievements and settings are cached on your device using React
+                    Native's secure storage system for seamless offline play.</li>
+                <li><strong>Cloud Database:</strong> Game saves are backed up to secure Google Firebase servers.</li>
+            </ul>
+            <p>
+                If you want to clear your data, you can do so at any time using the <strong>Reset Progress</strong> or
+                <strong>Delete Profile</strong> options directly from the in-game Account screen, which permanently
+                wipes both your local and cloud saves.
+            </p>
+        </section>
+
+        <section>
+            <h2>Third-Party Services</h2>
+            <p>
+                We utilize third-party services that may collect information used to identify your device:
+            </p>
+            <ul>
+                <li><strong>Google Firebase Auth & Firestore:</strong> To manage anonymous user login sessions and
+                    progression state sync.</li>
+                <li><strong>Apple App Store / Google Play Services:</strong> To facilitate game download, updates, and
+                    native OS notifications.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Children's Privacy</h2>
+            <p>
+                Pixel Chain is designed for players of all ages and is fully family-friendly. Because we do not collect
+                any personal information (such as real names or contact details), we do not knowingly solicit or collect
+                data from children under the age of 13.
+            </p>
+        </section>
+
+        <section>
+            <h2>Changes to This Policy</h2>
+            <p>
+                We may update our Privacy Policy from time to time. You are advised to review this page periodically for
+                any changes. Any updates are effective immediately upon posting to this URL.
+            </p>
+        </section>
+
+        <footer>
+            <img class="dev-name" src="./image/devname.png" alt="Developer Signature">
+            <p>&copy; 2026 Vincemavill Projects. All achievements unlocked.</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
