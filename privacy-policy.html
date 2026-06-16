@@ -261,7 +261,7 @@
             <img class="app-icon" src="./image/appicon.png" alt="Pixel Chain Icon">
             <img class="app-name" src="./image/appnamelong.png" alt="Pixel Chain">
             <p class="subtitle">Privacy Policy</p>
-            <p class="last-updated">Last Updated: May 26, 2026</p>
+            <p class="last-updated">Last Updated: June 16, 2026</p>
         </header>
 
         <section>
@@ -286,35 +286,31 @@
                 <li><strong>Anonymous Profile Data:</strong> When you set up the game, a randomly selected profile icon
                     and your chosen custom player name are stored. No real-world identities are requested or saved.</li>
                 <li><strong>Game Progression:</strong> We save your max unlocked level (from Level 1 to 200) and your
-                    collection of unlocked sticker rewards to sync your progress.</li>
+                    collection of unlocked sticker rewards to track your progress.</li>
                 <li><strong>Device Identification:</strong> An anonymous, system-generated identifier is used to
-                    unique-link your offline progress with cloud storage backups.</li>
+                    verify and manage your local profile and settings offline.</li>
             </ul>
         </section>
 
         <div class="callout-box">
-            <h3>🔒 Firebase Cloud Synchronization</h3>
+            <h3>🔒 Complete Offline Privacy</h3>
             <p>
-                Pixel Chain utilizes Google Firebase Firestore to securely back up your level progress and unlocked
-                sticker rewards. This ensures that you can restore your gameplay achievements even if you reinstall the
-                app or change devices. All data is linked to an anonymous credential.
+                Pixel Chain operates entirely offline. Your level progress, custom nickname, and unlocked stickers are saved locally on your device using AsyncStorage. Because we do not upload your data to any external server or cloud database, your gameplay remains completely private.
             </p>
         </div>
 
         <section>
             <h2>Storage & Data Retention</h2>
             <p>
-                Your gameplay data is stored in two locations:
+                Your gameplay data is stored in the following location:
             </p>
             <ul>
-                <li><strong>Local Storage:</strong> Achievements and settings are cached on your device using React
-                    Native's secure storage system for seamless offline play.</li>
-                <li><strong>Cloud Database:</strong> Game saves are backed up to secure Google Firebase servers.</li>
+                <li><strong>Local Storage:</strong> Achievements, settings, and profile details are cached locally on your device using React Native's AsyncStorage for seamless offline play.</li>
             </ul>
             <p>
                 If you want to clear your data, you can do so at any time using the <strong>Reset Progress</strong> or
                 <strong>Delete Profile</strong> options directly from the in-game Account screen, which permanently
-                wipes both your local and cloud saves.
+                wipes your local save data.
             </p>
         </section>
 
@@ -324,10 +320,8 @@
                 We utilize third-party services that may collect information used to identify your device:
             </p>
             <ul>
-                <li><strong>Google Firebase Auth & Firestore:</strong> To manage anonymous user login sessions and
-                    progression state sync.</li>
-                <li><strong>Apple App Store / Google Play Services:</strong> To facilitate game download, updates, and
-                    native OS notifications.</li>
+                <li><strong>Google Mobile Ads (AdMob):</strong> To serve advertisements in the game. Google AdMob may collect and process device identifiers, cookies, and other data for ad personalization, tracking, and analytics.</li>
+                <li><strong>Apple App Store / Google Play Services:</strong> To facilitate game download, updates, and native OS notifications.</li>
             </ul>
         </section>
 
